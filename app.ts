@@ -27,7 +27,7 @@ app.post("/github-event", (req: Request, res: Response) => {
       case "issues":
         const { issue } = req.body;
         console.log(
-          `${sender.login} ${action} issue ${issue} on ${repository.full_name}`
+          `${sender.login} ${action} issue ${issue.title} on ${repository.full_name}`
         );
         break;
       case "push":
